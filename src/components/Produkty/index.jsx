@@ -1,7 +1,10 @@
 import React, {useState, useEffect} from 'react';
 import './style.css';
 
-import {Link} from 'react-router-dom';
+import {
+	Link,
+	Outlet,
+} from 'react-router-dom';
 
 const Produkty = () => {
 
@@ -24,14 +27,18 @@ const Produkty = () => {
 		<div className="komponenta">
 			<h3>Produkty</h3>
 
-			<ul>
-				{/* <li><Link to="/produkty/1">Luke</Link></li>
-				<li><Link to="/produkty/2">C3PO</Link></li>
-				<li><Link to="/produkty/3">R2D2</Link></li>
-				<li><Link to="/produkty/4">Taťka Darth Vader</Link></li> */}
+			<div className="grid">
+				<ul>
+					{/* <li><Link to="/produkty/1">Luke</Link></li>
+					<li><Link to="/produkty/2">C3PO</Link></li>
+					<li><Link to="/produkty/3">R2D2</Link></li>
+					<li><Link to="/produkty/4">Taťka Darth Vader</Link></li> */}
 
-				{ seznam.map((person, index) => <li><Link to={`/produkty/${index+1}`}>{person.name}</Link></li> ) }
-			</ul>
+					{ seznam.map((person, index) => <li><Link to={`/produkty/${index+1}`}>{person.name}</Link></li> ) }
+				</ul>
+
+				<Outlet />
+			</div>
 
 		</div>
 	)

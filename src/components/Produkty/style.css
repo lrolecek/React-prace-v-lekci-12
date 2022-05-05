@@ -11,3 +11,8 @@
 .komponenta :last-child {
 	margin-bottom: 0;
 }
+
+.grid {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+}
