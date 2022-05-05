@@ -1,0 +1,13 @@
+.komponenta {
+	margin: 30px 0;
+	padding: 20px;
+	border: 3px solid teal;
+}
+
+.komponenta :first-child {
+	margin-top: 0;
+}
+
+.komponenta :last-child {
+	margin-bottom: 0;
+}
