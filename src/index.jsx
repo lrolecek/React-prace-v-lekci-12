@@ -14,6 +14,7 @@ import Uvod from './components/Uvod';
 import Produkty from './components/Produkty';
 import Onas from './components/Onas';
 import Kontakt from './components/Kontakt';
+import Detail from './components/Detail';
 
 const App = () => {
   return (
@@ -22,8 +23,11 @@ const App = () => {
 
       <nav>
         <Link to="/">Úvod</Link>
+        |
         <Link to="/produkty">Produkty</Link>
+        |
         <Link to="/onas">O nás</Link>
+        |
         <Link to="/kontakt">Kontakt</Link>
       </nav>
 
@@ -32,6 +36,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={ <Uvod /> } />
         <Route path="/produkty" element={ <Produkty /> } />
+        <Route path="/produkty/:id" element={ <Detail /> } />
         <Route path="/onas" element={ <Onas /> } />
         <Route path="/kontakt" element={ <Kontakt /> } />
       </Routes>
